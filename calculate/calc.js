@@ -1,4 +1,4 @@
-function calc() {
+function calc_damage() {
     const attack = +document.getElementById("attack").value;
     const defend = +document.getElementById("defend").value;
     const strike_val = +document.getElementById("strike_val").value;
@@ -18,5 +18,19 @@ function calc() {
     const f_damage_rate = Math.max(1 + d_damage_rate, 0.3);
     const damage = f_attack * multiply * damage_eff * f_damage_rate;
     const damage_strike = damage * strike_mul;
-    document.getElementById("result").innerText = `造成伤害: ${damage.toFixed(2)}\n暴击率: ${(f_strike_rate * 100).toFixed(2)}%\n暴击伤害: ${damage_strike.toFixed(2)}`;
+    document.getElementById("result_damage").innerText = `造成伤害: ${damage.toFixed(2)}\n暴击率: ${(f_strike_rate * 100).toFixed(2)}%\n暴击伤害: ${damage_strike.toFixed(2)}`;
+}
+
+function calc_control_rate() {
+    const control_val = +document.getElementById("control_val").value;
+    const control_def = +document.getElementById("control_def").value;
+    const d_control_val = +document.getElementById("d_control_val").value;
+    const d_control_def = +document.getElementById("d_control_def").value;
+    const base_rate = +document.getElementById("base_rate").value / 100;
+    const f_control_val = control_val + d_control_val;
+    const f_control_def = control_def + d_control_def;
+    const control_value = f_control_val - f_control_def;
+    const control_mul = (300 + 3 * control_value) / (300 + control_value);
+    const control_rate = base_rate * control_mul;
+    document.getElementById("result_control_rate").innerText = `控制命中率: ${(control_rate * 100).toFixed(2)}%`;
 }
