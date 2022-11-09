@@ -18,13 +18,7 @@
     text-align: center;
 }
 
-.input_field {
-    width: 100%;
-    float: left;
-    text-align: center;
-}
-
-.output {
+.total_field {
     width: 100%;
     float: left;
     text-align: center;
