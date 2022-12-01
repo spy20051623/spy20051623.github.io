@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/vue_test/node_modules" />
     </content>
     <content url="file://$MODULE_DIR$/vue_test/dist" />
     <content url="file://$MODULE_DIR$/vue_test/node_modules" />
